@@ -1,14 +1,21 @@
 const router = require('express').Router();
 const db = require('../../models');
+const mongojs = require('mongojs');
+
+const databaseUrl = "workoutdb";
+const collections = ["workouts"]
+
+const db = mongojs(databaseUrl, collections);
 
 router.get('/', async (req, res) => {
-    try {
-    const response = await db.Workout.find({})
-    console.log(response);
-    res.status(200).json(response);
-    } catch (err) {
-        res.status(500).json(err);
-    }
+    db.workouts.find.sort({day: 1}, (err, data) => {
+        if (err) {
+            console.log(err);
+        } else {
+            console.log(data);
+            res.json(data);
+        }
+    })
 })
 
 module.exports = router;
