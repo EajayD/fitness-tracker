@@ -1,21 +1,24 @@
 const router = require('express').Router();
-const db = require('../../models');
+const { Workout } = require('../../models');
 const mongojs = require('mongojs');
 
-const databaseUrl = "workoutdb";
-const collections = ["workouts"]
+// const databaseUrl = "workoutdb";
+// const collections = ["workouts"]
 
-const db = mongojs(databaseUrl, collections);
+// const db = mongojs(databaseUrl, collections);
 
 router.get('/', async (req, res) => {
-    db.workouts.find.sort({day: 1}, (err, data) => {
-        if (err) {
+    Workout.aggregate([
+        {$addFields: {totalDuration: {$sum: "$exercises.duration"}}},
+        {$sort: { day: 1 }}],
+        (err, data) => {
+          if (err) {
             console.log(err);
-        } else {
+          } else {
             console.log(data);
             res.json(data);
-        }
+          }
+        });
     })
-})
 
 module.exports = router;
