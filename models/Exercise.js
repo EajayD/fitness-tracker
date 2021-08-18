@@ -16,27 +16,22 @@ const ExerciseSchema = new Schema({
     
       duration: {
         type: Number,
-        min: 1
       },
     
       weight: {
           type: Number,
-          min: 1
       },
     
       reps: {
           type: Number,
-          min: 1
       },
     
       sets: {
         type: Number,
-        min: 1
       },
 
       distance: {
         type: Number,
-        default: 0
       }
 });
 
