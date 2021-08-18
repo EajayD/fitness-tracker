@@ -33,7 +33,7 @@ This is a simple application that allows you to organize and keep track your wor
 
 Alternatively you can click this live deployed link powered be Heroku to get started
 
-<a href ="https://mighty-reef-11300.herokuapp.com/">https://mighty-reef-11300.herokuapp.com/</a>
+<a href ="https://still-sands-72257.herokuapp.com/">https://still-sands-72257.herokuapp.com/</a>
 
 Below is a preview of what to expect on your fitness tracking journey
 
