@@ -12,7 +12,7 @@ This is a simple application that allows you to organize and keep track your wor
  First you want to clone this repository into your system
 
   ```
-  git clone git@github.com:EajayD/note-taker.git
+  git@github.com:EajayD/fitness-tracker.git
   ```
 
   Then you want to install the npm package 
@@ -27,7 +27,7 @@ This is a simple application that allows you to organize and keep track your wor
   node server.js
   ```
 
-  Then head over to <a href = "http://localhost:3001">http://localhost:3001</a> and get started with your note taking
+  Then head over to <a href = "http://localhost:3000">http://localhost:3000</a> and get started with your fitness tracking
 
 ## Usage
 
@@ -35,7 +35,7 @@ Alternatively you can click this live deployed link powered be Heroku to get sta
 
 <a href ="https://mighty-reef-11300.herokuapp.com/">https://mighty-reef-11300.herokuapp.com/</a>
 
-Below is a preview of what to expect on your note taking adventure
+Below is a preview of what to expect on your fitness tracking journey
 
 <img src="./public/Screenshot.png" alt="preview">
 
